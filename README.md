@@ -7,12 +7,15 @@ It runs sensu-api, sensu-server, redis, rabbitmq-server, uchiwa and ssh processe
 
 Install from docker index or build from Dockerfile
 
+## Docker pull
+
 ```
 docker pull juliomauro/docker-sensu-uchiwa-server
 ```
 
 or
 
+## Git clone + docker build
 ```
 git clone https://github.com/juliomauro/docker-sensu-uchiwa-server.git
 cd docker-sensu-uchiwa-server
@@ -27,16 +30,16 @@ docker run -d -p 10022:22 -p 3000:3000 -p 4567:4567 -p 5671:5671 -p 15672:15672 
 
 ## How to access via browser and sensu-client
 
-### rabbitmq console
+### - rabbitmq console
 
 * http://your-server:15672/
 * id/pwd : sensu/password
 
-### uchiwa
+###  - uchiwa
 
 * http://your-server:3000/
 
-### sensu-client
+###  - sensu-client
 
 To run sensu-client, create client.json (see example below), then just run sensu-client process.
 
